@@ -11,7 +11,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-comp7
 libnetcdf:
-- 4.7.4
+- 4.8.0
 target_platform:
 - linux-64
 zip_keys:
