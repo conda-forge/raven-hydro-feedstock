@@ -9,10 +9,17 @@ package:
 source:
   url: http://www.civil.uwaterloo.ca/jmai/raven/Raven-rev{{ revision }}.zip
   sha256: 96513a51db42c81875347fc4d56cb323ec7feab71a9c4b7f8b03d2144552e582
+  script:
+    # (1) Replace "g++" by $(CXX) in the Makefile
+    - sed -i 's/CXX      \:\= g++/# CXX      \:\= g++/g' ./Makefile
+    # (2) Rename the app to Raven, not Raven.exe in the Makefile
+    - sed -i 's/appname \:\= Raven\.exe/appname \:\= raven/g' Makefile
+    - make
+    - cp ./raven $PREFIX/bin/raven
 
 build:
-  number: 0
-  skip: true  # [not linux]
+  number: 1
+  skip: true  # [win]
 
 requirements:
   build:
