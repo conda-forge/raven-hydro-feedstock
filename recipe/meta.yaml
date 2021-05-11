@@ -20,6 +20,7 @@ build:
     - sed -i 's/appname \:\= Raven\.exe/appname \:\= raven/g' Makefile
     # (3) Link the netcdf cxx libraries dynamically with netcdf-cxx-config
     - sed -i 's/LDLIBS   \:\= -L\/usr\/local -lnetcdf/LDLIBS   \:\= $(shell nc-config --libs)/g' Makefile
+    - cat Makfile
     - make
     - cp ./raven $PREFIX/bin/raven
 
