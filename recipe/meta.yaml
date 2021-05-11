@@ -18,15 +18,15 @@ build:
     - sed -i 's/CXX      \:\= g++/# CXX      \:\= g++/g' Makefile
     # (2) Rename the app to Raven, not Raven.exe in the Makefile
     - sed -i 's/appname \:\= Raven\.exe/appname \:\= raven/g' Makefile
-    # (3) Link the netcdf cxx libraries dynamically with ncxx4-config
-    - sed -i 's/LDLIBS   \:\= -L\/usr\/local -lnetcdf/LDLIBS   \:\= $(ncxx4-config --libs)/g' Makefile
+    # (3) Link the netcdf cxx libraries dynamically with netcdf-cxx-config
+    - sed -i 's/LDLIBS   \:\= -L\/usr\/local -lnetcdf/LDLIBS   \:\= $(nc-config --libs)/g' Makefile
     - make
     - cp ./raven $PREFIX/bin/raven
 
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - netcdf-cxx4
+    - netcdf-cxx-legacy
     - sed
     - make
     - libnetcdf
