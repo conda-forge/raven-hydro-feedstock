@@ -24,6 +24,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - sed
     - make
     - libnetcdf
   host:
