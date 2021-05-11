@@ -24,6 +24,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - netcdf-cxx4
     - sed
     - make
     - libnetcdf
