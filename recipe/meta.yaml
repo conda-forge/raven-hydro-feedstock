@@ -22,7 +22,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - sed
+    - libnetcdf
     - make
   host:
     - libnetcdf
