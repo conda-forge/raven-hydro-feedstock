@@ -18,8 +18,8 @@ diff -ruN Raven-rev322/Makefile Raven-rev322-patch/Makefile
  # include netcdf
 -CXXFLAGS += -Dnetcdf                # if netcdf is installed use "CXXFLAGS += -Dnetcdf",                    else "CXXFLAGS += "
 -LDLIBS   := -L/usr/local -lnetcdf   # if netcdf is installed give first path "-L<PATH>"and then "-lnetcdf", else "LDLIBS   := "
++# if netcdf is installed use "CXXFLAGS += -Dnetcdf",                    else "CXXFLAGS += "
 +CXXFLAGS += -Dnetcdf
-+CXXFLAGS += $(shell nc-config --cflags)
 +LDLIBS   := $(shell nc-config --libs)
  
  # if you use a UNIX system, uncomment the LDFLAGS line below
@@ -32,4 +32,3 @@ diff -ruN Raven-rev322/Makefile Raven-rev322-patch/Makefile
 +	$(CXX) $(CXXFLAGS) -o $(appname) $(objects) $(LDLIBS) $(LDFLAGS)
  
  depend: .depend
- 
