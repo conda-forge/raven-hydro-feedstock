@@ -9,24 +9,19 @@ package:
 source:
   url: http://www.civil.uwaterloo.ca/jmai/raven/Raven-rev{{ revision }}.zip
   sha256: 96513a51db42c81875347fc4d56cb323ec7feab71a9c4b7f8b03d2144552e582
+  patches:
+    - 0001-fix-makefile.patch
 
 build:
   number: 1
   skip: true  # [win]
   script:
-    # (1) Replace "g++" by $(CXX) in the Makefile
-    - sed -i 's/CXX      \:\= g++/# CXX      \:\= g++/g' Makefile
-    # (2) Rename the app to Raven, not Raven.exe in the Makefile
-    - sed -i 's/appname \:\= Raven\.exe/appname \:\= raven/g' Makefile
-    # (3) Link the netcdf cxx libraries dynamically with netcdf-cxx-config
-    - sed -i 's/LDLIBS   \:\= -L\/usr\/local -lnetcdf/LDLIBS   \:\= $(shell nc-config --libs)/g' Makefile
     - make
     - cp ./raven $PREFIX/bin/raven
 
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - netcdf-cxx-legacy
     - sed
     - make
   host:
