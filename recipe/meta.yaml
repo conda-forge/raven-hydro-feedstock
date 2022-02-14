@@ -11,7 +11,7 @@ source:
   sha256: 96513a51db42c81875347fc4d56cb323ec7feab71a9c4b7f8b03d2144552e582
   patches:
     - 0001-fix-makefile.patch  # [not win]
-    - 0002-fix-makefile.patch  # [win]
+    - 0002-fix-makefile-windows.patch  # [win]
 
 build:
   number: 3
