@@ -13,7 +13,7 @@ source:
     - 0001-fix-makefile.patch
 
 build:
-  number: 2
+  number: 3
   script:
     - make
     - cp ./raven $PREFIX/bin/raven
