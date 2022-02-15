@@ -8,7 +8,7 @@
 -
 -CXX      := g++
 -CXXFLAGS := -Wno-deprecated
-+appname := raven
++appname := raven.exe
  
  srcfiles := $(shell find . -name "*.cpp")
 -objects  := $(patsubst %.cpp, %.o, $(srcfiles))
