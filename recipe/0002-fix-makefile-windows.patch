@@ -35,7 +35,7 @@
 -	rm -f ./.depend
 -	$(CXX) $(CXXFLAGS) -MM $^>>./.depend;
 -
-+	$(CXX) $(CXXFLAGS) $(appname) $(objects)
++	$(CXX) $(CXXFLAGS) $(objects)
  clean:
  	rm -f $(objects)
  
