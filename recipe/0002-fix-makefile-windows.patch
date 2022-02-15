@@ -12,7 +12,7 @@
  
  srcfiles := $(shell find . -name "*.cpp")
 -objects  := $(patsubst %.cpp, %.o, $(srcfiles))
-+objects := $(patsubst %.cpp, %.obj, $(srcfiles))
++objects := $(patsubst %.cpp, %.o, $(srcfiles))
  
 -# include netcdf
 -CXXFLAGS += -Dnetcdf                # if netcdf is installed use "CXXFLAGS += -Dnetcdf",                    else "CXXFLAGS += "
