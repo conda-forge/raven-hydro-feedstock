@@ -16,16 +16,14 @@ source:
 build:
   number: 3
   script:
-    - make  # [not win]
-    - cmake  # [win]
+    - make
     - cp ./raven $PREFIX/bin/raven  # [not win]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - libnetcdf
-    - make  # [not win]
-    - cmake  # [win]
+    - make
   host:
     - libnetcdf
   run:
