@@ -2,6 +2,7 @@ setlocal EnableDelayedExpansion
 
 :: Make a build folder and change to it.
 mkdir build-raven
+move CMakeLists.txt build-raven
 cd build-raven
 
 :: Configure using the CMakeFiles
