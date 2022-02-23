@@ -21,9 +21,9 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - libnetcdf
-    - make  # [not win]
     - cmake  # [win]
+    - libnetcdf
+    - make
   host:
     - libnetcdf
   run:

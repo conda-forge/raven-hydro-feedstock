@@ -6,10 +6,10 @@ cd build
 
 :: Configure using the CMakeFiles
 cmake -G "NMake Makefiles" ^
-      -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
-      -DCMAKE_PREFIX_PATH:PATH="%LIBRARY_PREFIX%" ^
-      -DCMAKE_BUILD_TYPE:STRING=Release ^
-      -DCMAKE_C_FLAGS="%CFLAGS% -DNETCDF" ^
+@REM       -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
+@REM       -DCMAKE_PREFIX_PATH:PATH="%LIBRARY_PREFIX%" ^
+@REM       -DCMAKE_BUILD_TYPE:STRING=Release ^
+      -DCMAKE_CXX_FLAGS="%CXXFLAGS% -DNETCDF -WNO-DEPRECATED" ^
       .. ^
 if errorlevel 1 exit 1
 
