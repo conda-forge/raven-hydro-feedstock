@@ -4,9 +4,8 @@ setlocal EnableDelayedExpansion
 mkdir build
 cd build
 
-:: Copy CMakeLists.txt to source dir and build ofr good measure
+:: Copy CMakeLists.txt to source directory
 copy "%RECIPE_DIR%\CMakeLists.txt" %SRC_DIR%
-copy "%RECIPE_DIR%\CMakeLists.txt" build
 if errorlevel 1 exit 1
 
 :: Configure using the CMakeFiles
