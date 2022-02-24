@@ -125,8 +125,6 @@ add_executable(Raven
   resource.h
   RiverReach.cpp
   RiverReach.h
-  RobinInterface.cpp
-  RobinInterface.h
   SnowAlbedo.cpp
   SnowBalance.cpp
   SnowMeltRefreeze.cpp
@@ -261,7 +259,6 @@ source_group("Source Files\\_Driver" FILES
   ModelInitialize.cpp
   Assimilate.cpp
   ModelParamCheck.cpp
-  RobinInterface.cpp
 )
 source_group("Source Files\\_Driver\\Input Parsing" FILES 
   ParseHRUFile.cpp
@@ -328,7 +325,6 @@ source_group("Header Files" FILES
   StateVariables.h
   UnitTesting.h
   SparseMatrix.h
-  RobinInterface.h
   PropertyClassABC.h
   StageDischargeRelations.h
 )
