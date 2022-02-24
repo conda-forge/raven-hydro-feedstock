@@ -1,7 +1,12 @@
 setlocal EnableDelayedExpansion
 
 :: Make a build folder and change to it.
-move CMakeLists.txt %SRC_DIR%
+mkdir build
+cd build
+
+:: Copy CMakeLists.txt to source dir and build ofr good measure
+copy CMakeLists.txt %SRC_DIR%
+copy CMakeLists.txt build
 
 :: Configure using the CMakeFiles
 cmake -G "NMake Makefiles" ^
