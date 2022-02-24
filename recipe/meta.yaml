@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: http://raven.uwaterloo.ca/files/v{{ version }}/RavenSource-v{{ version }}.zip
+  url: http://raven.uwaterloo.ca/files/v{{ version }}/RavenSource_v{{ version }}.zip
   sha256: 5f27e3d290dd7739337006dc58a595ea0e2e09d659e72ff13c00e5030eebe9c3
   patches:
     - 0001-fix-makefile.patch  # [not win]
