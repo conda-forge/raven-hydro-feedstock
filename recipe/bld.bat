@@ -22,7 +22,7 @@ nmake
 if errorlevel 1 exit 1
 
 :: Install!
-nmake install
+copy Raven.exe $PREFIX%\bin
 if errorlevel 1 exit 1
 
 @REM :: Move executable to binary folder - If needed
