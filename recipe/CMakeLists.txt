@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.20)
 # Setup Project
 PROJECT(Raven CXX)
 
+# Find NetCDF
+find_package(NetCDF REQUIRED)
+
 # Create Cpp Executable
 include_directories(Raven)
 add_executable(Raven
@@ -172,6 +175,8 @@ add_executable(Raven
   VegetationMovers.h
   VegetationParams.cpp
 )
+
+target_link_libraries(Raven PRIVATE NetCDF)
 
 source_group("Source Files" FILES 
   CommonFunctions.cpp
