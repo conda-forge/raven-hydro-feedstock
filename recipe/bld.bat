@@ -10,7 +10,7 @@ if errorlevel 1 exit 1
 
 :: Configure using the CMakeFiles
 cmake -G "NMake Makefiles" ^
-      -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
+      -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_BIN%" ^
       -DCMAKE_PREFIX_PATH:PATH="%LIBRARY_PREFIX%" ^
       -DCMAKE_BUILD_TYPE:STRING=Release ^
       -DCMAKE_CXX_FLAGS="%CXXFLAGS% -Dnetcdf" ^
@@ -22,7 +22,7 @@ nmake
 if errorlevel 1 exit 1
 
 :: Install!
-copy Raven.exe $PREFIX%\bin
+nmake install
 if errorlevel 1 exit 1
 
 @REM :: Move executable to binary folder - If needed
