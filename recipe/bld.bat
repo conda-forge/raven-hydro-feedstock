@@ -22,9 +22,8 @@ nmake
 if errorlevel 1 exit 1
 
 :: Install!
-nmake install
-if errorlevel 1 exit 1
+@REM nmake install
 
-@REM :: Move executable to binary folder - If needed
-@REM copy Raven.exe %LIBRARY_BIN%
-@REM if errorlevel 1 exit 1
+:: Move executable to binary folder
+copy Raven.exe %LIBRARY_BIN%
+if errorlevel 1 exit 1
