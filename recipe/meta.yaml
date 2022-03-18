@@ -1,29 +1,28 @@
 {% set name = "raven-hydro" %}
-{% set version = "3.0.4" %}
-{% set revision = "322" %}
+{% set version = "3.5" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}.{{ revision }}
+  version: {{ version }}
 
 source:
-  url: http://www.civil.uwaterloo.ca/jmai/raven/Raven-rev{{ revision }}.zip
-  sha256: 96513a51db42c81875347fc4d56cb323ec7feab71a9c4b7f8b03d2144552e582
+  url: http://raven.uwaterloo.ca/files/v{{ version }}/RavenSource_v{{ version }}.zip
+  sha256: 5f27e3d290dd7739337006dc58a595ea0e2e09d659e72ff13c00e5030eebe9c3
   patches:
-    - 0001-fix-makefile.patch
+    - 0001-fix-makefile.patch  # [not win]
 
 build:
-  number: 2
-  skip: true  # [win]
+  number: 0
   script:
-    - make
-    - cp ./raven $PREFIX/bin/raven
+    - make  # [not win]
+    - cp ./raven $PREFIX/bin/raven  # [not win]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - cmake  # [win]
     - libnetcdf
-    - make
+    - make  # [not win]
   host:
     - libnetcdf
   run:
@@ -31,7 +30,7 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/bin/raven
+    - test -f $PREFIX/bin/raven  # [not win]
     - raven -v
 
 about:
