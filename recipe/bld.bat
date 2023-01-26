@@ -5,8 +5,8 @@ mkdir build
 cd build
 
 :: Copy CMakeLists.txt to source directory
-copy "%RECIPE_DIR%\CMakeLists.txt" %SRC_DIR%
-if errorlevel 1 exit 1
+@REM copy "%RECIPE_DIR%\CMakeLists.txt" %SRC_DIR%
+@REM if errorlevel 1 exit 1
 
 :: Configure using the CMakeFiles
 cmake -G "NMake Makefiles" ^

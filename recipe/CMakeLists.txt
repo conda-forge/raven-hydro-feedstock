@@ -279,10 +279,10 @@ source_group("Source Files\\_Driver\\Input Parsing" FILES
   ParseGWFile.cpp
 )
 source_group("Source Files\\Hydrological Processes\\Lake/Glacier/Wetland Processes" FILES 
-  OpenWaterEvap.cpp
-  GlacierProcesses.cpp
-  DepressionProcesses.cpp
   Abstraction.cpp
+  DepressionProcesses.cpp
+  GlacierProcesses.cpp
+  OpenWaterEvap.cpp
 )
 source_group("Source Files\\_Driver\\Output" FILES 
   CustomOutput.cpp
