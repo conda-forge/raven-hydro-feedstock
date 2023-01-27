@@ -1,0 +1,68 @@
+--- RavenSource_v3.6_old/CMakeLists.txt	2022-03-09 10:03:08.000000000 -0500
++++ RavenSource_v3.6/CMakeLists.txt	2023-01-27 10:24:31.529016234 -0500
+@@ -1,58 +1,7 @@
+ cmake_minimum_required(VERSION 3.20)
+ 
+ # Setup Project
+-PROJECT(Raven CXX Fortran)
+-
+-# Create MFUSG Library
+-add_library(MFUSGLib
+-  MFUSGLib/cln2basu1.f
+-  MFUSGLib/cln2props1.f
+-  MFUSGLib/density.f
+-  MFUSGLib/disu2gncb1.f
+-  MFUSGLib/disu2gncn1.f
+-  MFUSGLib/Extern.f90
+-  MFUSGLib/fpath.f90
+-  MFUSGLib/glo2basu1.f
+-  MFUSGLib/glo2btnu1.f
+-  MFUSGLib/glo2sgbu1.f
+-  MFUSGLib/glo2sms-u1.f
+-  MFUSGLib/gmodules.f
+-  MFUSGLib/gwf2basu1.f
+-  MFUSGLib/gwf2bcf-lpf-u1.f
+-  MFUSGLib/gwf2chd7u1.f
+-  MFUSGLib/gwf2dpf1u1.f
+-  MFUSGLib/gwf2drn7u1.f
+-  MFUSGLib/gwf2drt8u.f
+-  MFUSGLib/gwf2ets8u1.f
+-  MFUSGLib/gwf2evt8u1.f
+-  MFUSGLib/gwf2fhb7u1.f
+-  MFUSGLib/gwf2gag7u1.f
+-  MFUSGLib/gwf2ghb7u1.f
+-  MFUSGLib/gwf2hfb7u1.f
+-  MFUSGLib/gwf2lak7u1.f
+-  MFUSGLib/gwf2pbju1.f
+-  MFUSGLib/gwf2QRT8u.f
+-  MFUSGLib/gwf2rch8u1.f
+-  MFUSGLib/gwf2riv7u1.f
+-  MFUSGLib/gwf2sfr7u1.f
+-  MFUSGLib/gwf2str7u1.f
+-  MFUSGLib/gwf2sub7u1.f
+-  MFUSGLib/gwf2wel7u1.f
+-  MFUSGLib/gwt2bndsu1.f
+-  MFUSGLib/gwt2dptu1.f
+-  MFUSGLib/lak_gag_sfr_modules.f
+-  MFUSGLib/mfusg.f
+-  MFUSGLib/MFUSGLib.vfproj
+-  MFUSGLib/parutl7.f
+-  MFUSGLib/pcgu7.f
+-  MFUSGLib/rvn2pbju1.f90
+-  MFUSGLib/sparse.f
+-  MFUSGLib/tvmu1.f
+-  MFUSGLib/tvmu2.f
+-  MFUSGLib/utl7u1.f
+-  MFUSGLib/xmd.f
+-  MFUSGLib/xmdlib_2.f
+-)
++PROJECT(Raven CXX)
+ 
+ # Create Cpp Executable
+ include_directories(Raven)
+@@ -419,5 +368,4 @@
+   Raven/resource.h
+   Raven/Raven.rc
+ )
+-target_link_libraries(Raven MFUSGLib)
+ set_target_properties(Raven PROPERTIES LINKER_LANGUAGE CXX)

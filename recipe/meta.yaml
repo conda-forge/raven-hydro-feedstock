@@ -10,6 +10,7 @@ source:
   sha256: a962f3377425868d9cc535b6858e0457f5307636f99466ee37ab66ecfbcaf35c
   patches:
     - 0001-fix-makefile.patch  # [not win]
+    - 0002-fix-CMakeLists.patch  # [win]
 
 build:
   number: 0
@@ -20,7 +21,6 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}  # [win]
     - cmake  # [win]
     - libnetcdf
     - make  # [not win]
