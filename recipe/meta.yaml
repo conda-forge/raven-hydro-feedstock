@@ -20,7 +20,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }} # [win]
+    - {{ compiler('fortran') }}  # [win]
     - cmake  # [win]
     - libnetcdf
     - make  # [not win]
