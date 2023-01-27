@@ -115,7 +115,6 @@ add_executable(Raven
   ProcessGroup.cpp
   ProcessGroup.h
   Properties.h
-  PropertyClassABC.h
   Radiation.cpp
   Radiation.h
   Raven.rc
