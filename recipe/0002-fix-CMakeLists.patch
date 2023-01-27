@@ -1,5 +1,6 @@
---- RavenSource_v3.6_old/CMakeLists.txt	2022-03-09 10:03:08.000000000 -0500
-+++ RavenSource_v3.6/CMakeLists.txt	2023-01-27 10:24:31.529016234 -0500
+diff -ruN RavenSource_v3.6/CMakeLists.txt RavenSource_v3.6-patch/CMakeLists.txt
+--- RavenSource_v3.6/CMakeLists.txt	2022-03-09 10:03:08.000000000 -0500
++++ RavenSource_v3.6-patch/CMakeLists.txt	2023-01-27 10:24:31.529016234 -0500
 @@ -1,58 +1,7 @@
  cmake_minimum_required(VERSION 3.20)
  
