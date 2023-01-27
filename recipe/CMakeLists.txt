@@ -18,6 +18,8 @@ add_executable(Raven
   CapillaryRise.cpp
   ChannelXSect.cpp
   ChannelXSect.h
+  ChemEquilibrium.cpp
+  ChemEquilibrium.h
   CommonFunctions.cpp
   ConstituentModel.cpp
   ControlStructures.cpp
@@ -36,6 +38,8 @@ add_executable(Raven
   Diagnostics.cpp
   Diagnostics.h
   Drain.cpp
+  EnKF.cpp
+  EnKF.h
   EnergyTransport.cpp
   EnergyTransport.h
   Evaporation.cpp
@@ -82,6 +86,8 @@ add_executable(Raven
   MassLoading.cpp
   MassLoading.h
   MassRouting.cpp
+  Matrix.cpp
+  Matrix.h
   MFUSGpp.h
   Model.cpp
   Model.h
@@ -115,7 +121,6 @@ add_executable(Raven
   ProcessGroup.cpp
   ProcessGroup.h
   Properties.h
-  PropertyClassABC.h
   Radiation.cpp
   Radiation.h
   Raven.rc
@@ -279,10 +284,10 @@ source_group("Source Files\\_Driver\\Input Parsing" FILES
   ParseGWFile.cpp
 )
 source_group("Source Files\\Hydrological Processes\\Lake/Glacier/Wetland Processes" FILES 
-  OpenWaterEvap.cpp
-  GlacierProcesses.cpp
-  DepressionProcesses.cpp
   Abstraction.cpp
+  DepressionProcesses.cpp
+  GlacierProcesses.cpp
+  OpenWaterEvap.cpp
 )
 source_group("Source Files\\_Driver\\Output" FILES 
   CustomOutput.cpp
