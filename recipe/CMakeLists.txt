@@ -18,6 +18,8 @@ add_executable(Raven
   CapillaryRise.cpp
   ChannelXSect.cpp
   ChannelXSect.h
+  ChemEquilibrium.cpp
+  ChemEquilibrium.h
   CommonFunctions.cpp
   ConstituentModel.cpp
   ControlStructures.cpp
@@ -84,6 +86,8 @@ add_executable(Raven
   MassLoading.cpp
   MassLoading.h
   MassRouting.cpp
+  Matrix.cpp
+  Matrix.h
   MFUSGpp.h
   Model.cpp
   Model.h
