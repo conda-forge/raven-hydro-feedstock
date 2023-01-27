@@ -36,6 +36,8 @@ add_executable(Raven
   Diagnostics.cpp
   Diagnostics.h
   Drain.cpp
+  EnKF.cpp
+  EnKF.h
   EnergyTransport.cpp
   EnergyTransport.h
   Evaporation.cpp
