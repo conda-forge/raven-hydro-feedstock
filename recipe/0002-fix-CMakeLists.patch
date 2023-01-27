@@ -1,7 +1,7 @@
-diff -ruN RavenSource_v3.6_old/CMakeLists.txt RavenSource_v3.6/CMakeLists.txt
+diff -ruN RavenSource_v3.6/CMakeLists.txt RavenSource_v3.6-patch/CMakeLists.txt
 --- RavenSource_v3.6/CMakeLists.txt	2022-03-09 10:03:08.000000000 -0500
-+++ RavenSource_v3.6-patch/CMakeLists.txt	2023-01-27 10:43:43.514152893 -0500
-@@ -1,423 +1,371 @@
++++ RavenSource_v3.6-patch/CMakeLists.txt	2023-01-27 11:07:42.765506236 -0500
+@@ -1,423 +1,370 @@
  cmake_minimum_required(VERSION 3.20)
  
  # Setup Project
@@ -307,7 +307,6 @@ diff -ruN RavenSource_v3.6_old/CMakeLists.txt RavenSource_v3.6/CMakeLists.txt
 +  ProcessGroup.cpp
 +  ProcessGroup.h
 +  Properties.h
-+  PropertyClassABC.h
 +  Radiation.cpp
 +  Radiation.h
 +  Raven.rc
