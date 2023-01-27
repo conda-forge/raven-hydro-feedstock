@@ -1,3 +1,4 @@
+diff -ruN RavenSource_v3.6/Makefile RavenSource_v3.6-patch/Makefile
 --- RavenSource_v3.6/Makefile	2023-01-26 17:14:12.327995835 -0500
 +++ RavenSource_v3.6/Makefile	2023-01-26 17:20:00.256887397 -0500
 @@ -12,19 +12,17 @@
