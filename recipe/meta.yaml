@@ -12,7 +12,7 @@ source:
     - 0001-fix-makefile.patch  # [not win]
 
 build:
-  number: 1
+  number: 2
   script:
     - make  # [not win]
     - cp ./raven $PREFIX/bin/raven  # [not win]
