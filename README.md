@@ -11,7 +11,7 @@ Summary: The conda-forge binary for the Raven hydrological model developed at th
 
 Development: https://chyms.nrc.gc.ca/
 
-Documentation: http://raven.uwaterloo.ca/files/v3.6/RavenManual_v3.6.pdf
+Documentation: http://raven.uwaterloo.ca/files/v3.7/RavenManual_v3.7.pdf
 
 Current build status
 ====================
@@ -181,5 +181,6 @@ Feedstock Maintainers
 =====================
 
 * [@Zeitsperre](https://github.com/Zeitsperre/)
+* [@huard](https://github.com/huard/)
 * [@julemai](https://github.com/julemai/)
 
