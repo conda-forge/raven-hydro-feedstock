@@ -1,5 +1,5 @@
 {% set name = "raven-hydro" %}
-{% set version = "3.6" %}
+{% set version = "3.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: http://raven.uwaterloo.ca/files/v{{ version }}/RavenSource_v{{ version }}.zip
-  sha256: a962f3377425868d9cc535b6858e0457f5307636f99466ee37ab66ecfbcaf35c
+  sha256: 532db73a5ee0a0aa875947efb4c91b7584b7677b6d706968ea5c2d607853be67
   patches:
     - 0001-fix-makefile.patch  # [not win]
 
 build:
-  number: 2
+  number: 0
   script:
     - make  # [not win]
     - cp ./raven $PREFIX/bin/raven  # [not win]
