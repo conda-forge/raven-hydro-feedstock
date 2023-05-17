@@ -1,28 +1,30 @@
 {% set name = "raven-hydro" %}
-{% set version = "3.6" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: http://raven.uwaterloo.ca/files/v{{ version }}/RavenSource_v{{ version }}.zip
-  sha256: a962f3377425868d9cc535b6858e0457f5307636f99466ee37ab66ecfbcaf35c
-  patches:
-    - 0001-fix-makefile.patch  # [not win]
+  url: https://test.pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 498dd7d0193fd9659678919e731b96d69f14479b74b31ec954c05861ebe7d853
+#  url: http://raven.uwaterloo.ca/files/v{{ version }}/RavenSource_v{{ version }}.zip
+#  sha256: a962f3377425868d9cc535b6858e0457f5307636f99466ee37ab66ecfbcaf35c
+
 
 build:
+  noarch: python
   number: 0
-  script:
-    - make  # [not win]
-    - cp ./raven $PREFIX/bin/raven  # [not win]
+#  script:
+#    - make  # [not win]
+#    - cp ./raven $PREFIX/bin/raven  # [not win]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - cmake  # [win]
+    - python
+    - scikit-build-core
     - libnetcdf
-    - make  # [not win]
   host:
     - libnetcdf
   run:
