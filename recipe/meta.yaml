@@ -13,7 +13,6 @@ source:
 
 
 build:
-  noarch: python
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 #  script:
@@ -24,6 +23,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
+    - make  # [linux]
   host:
     - python >=3.8
     - hatch-fancy-pypi-readme
@@ -33,9 +33,11 @@ requirements:
     - pybind11
     - python >=3.8
     - scikit-build-core
+    - zlib
   run:
     - python >=3.8
     - libnetcdf
+    - zlib
 
 test:
   imports:
