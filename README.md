@@ -224,4 +224,4 @@ Feedstock Maintainers
 
 * [@Zeitsperre](https://github.com/Zeitsperre/)
 * [@julemai](https://github.com/julemai/)
-
+* [@huard](https://github.com/huard/)
