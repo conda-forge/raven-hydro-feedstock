@@ -8,34 +8,29 @@ package:
 source:
   url: https://test.pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 498dd7d0193fd9659678919e731b96d69f14479b74b31ec954c05861ebe7d853
-#  url: http://raven.uwaterloo.ca/files/v{{ version }}/RavenSource_v{{ version }}.zip
-#  sha256: a962f3377425868d9cc535b6858e0457f5307636f99466ee37ab66ecfbcaf35c
-
 
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
-#  script:
-#    - make  # [not win]
-#    - cp ./raven $PREFIX/bin/raven  # [not win]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
-    - make  # [linux]
+    - make  # [not win]
+    - ninja  # [win]
   host:
-    - python >=3.8
+    - python
     - hatch-fancy-pypi-readme
     - hatchling
     - libnetcdf
     - pip
     - pybind11
-    - python >=3.8
+    - python
     - scikit-build-core
     - zlib
   run:
-    - python >=3.8
+    - python
     - libnetcdf
     - zlib
 
