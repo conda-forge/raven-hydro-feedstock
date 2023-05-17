@@ -3,11 +3,13 @@ About raven-hydro-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/raven-hydro-feedstock/blob/main/LICENSE.txt)
 
-Home: http://raven.uwaterloo.ca/
+Home: http://raven.uwaterloo.ca
 
 Package license: Artistic-2.0
 
 Summary: The conda-forge binary for the Raven hydrological model developed at the University of Waterloo in Ontario, Canada.
+
+Development: https://github.com/Ouranosinc/raven-hydro
 
 Documentation: http://raven.uwaterloo.ca/files/v3.7/RavenManual_v3.7.pdf
 

@@ -43,7 +43,7 @@ test:
     - raven -v
 
 about:
-  home: http://raven.uwaterloo.ca/
+  home: http://raven.uwaterloo.ca
   dev_url: https://github.com/Ouranosinc/raven-hydro
   doc_url: http://raven.uwaterloo.ca/files/v{{ raven_version }}/RavenManual_v{{ raven_version }}.pdf
   doc_source_url: http://raven.uwaterloo.ca/Downloads.html
