@@ -15,6 +15,7 @@ source:
 build:
   noarch: python
   number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
 #  script:
 #    - make  # [not win]
 #    - cp ./raven $PREFIX/bin/raven  # [not win]
@@ -22,12 +23,18 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - python
-    - scikit-build-core
-    - libnetcdf
+    - cmake
   host:
+    - python >=3.8
+    - hatch-fancy-pypi-readme
+    - hatchling
     - libnetcdf
+    - pip
+    - pybind11
+    - python >=3.8
+    - scikit-build-core
   run:
+    - python >=3.8
     - libnetcdf
 
 test:
