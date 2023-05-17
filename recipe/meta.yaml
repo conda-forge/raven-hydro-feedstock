@@ -38,6 +38,8 @@ requirements:
     - libnetcdf
 
 test:
+  imports:
+    - raven_hydro
   commands:
     - test -f $PREFIX/bin/raven  # [not win]
     - raven -v
