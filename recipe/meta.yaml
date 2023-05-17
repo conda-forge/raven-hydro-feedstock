@@ -38,7 +38,10 @@ requirements:
 test:
   imports:
     - raven_hydro
+  requires:
+    - pip
   commands:
+    - pip check
     - test -f $PREFIX/bin/raven  # [not win]
     - raven -v
 
@@ -47,8 +50,10 @@ about:
   dev_url: https://github.com/Ouranosinc/raven-hydro
   doc_url: http://raven.uwaterloo.ca/files/v{{ raven_version }}/RavenManual_v{{ raven_version }}.pdf
   doc_source_url: http://raven.uwaterloo.ca/Downloads.html
-  license: Artistic-2.0
-  license_file: LICENSE
+  license: Apache-2.0 and Artistic-2.0
+  license_file:
+    - LICENSE
+    - build/RavenSource/LICENSE
   summary: The Python-based installer for the hydrological modelling framework, Raven, developed at the University of Waterloo in Ontario, Canada.
 
 extra:
