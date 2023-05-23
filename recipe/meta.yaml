@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://test.pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 498dd7d0193fd9659678919e731b96d69f14479b74b31ec954c05861ebe7d853
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5e808f0d165cf7c71888b3a7b9b4943c3f7b2ba5f3b241855ddcc0b5a54b75e4
 
 build:
   number: 0
@@ -53,7 +53,7 @@ about:
   license: Apache-2.0 and Artistic-2.0
   license_file:
     - LICENSE
-    - build/RavenSource/LICENSE
+    - build/_deps/raven-src/LICENSE
   summary: The Python-based installer for the hydrological modelling framework, Raven, developed at the University of Waterloo in Ontario, Canada.
 
 extra:
