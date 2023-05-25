@@ -55,7 +55,9 @@ about:
   license_file:
     - LICENSE
     - build/_deps/raven-src/LICENSE
-  summary: The Python-based installer for the hydrological modelling framework, Raven, developed at the University of Waterloo in Ontario, Canada.
+  summary: |
+    The Python-based installer for the hydrological modelling framework, Raven,
+    developed at the University of Waterloo in Ontario, Canada.
 
 extra:
   recipe-maintainers:
