@@ -1,6 +1,6 @@
 {% set name = "raven-hydro" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "5e808f0d165cf7c71888b3a7b9b4943c3f7b2ba5f3b241855ddcc0b5a54b75e4" %}
+{% set version = "0.2.1" %}
+{% set sha256 = "e57e2b15f05a807fbffbbc34958b47ad27c8650930d4a438efc67c412d473241" %}
 {% set raven_version = "3.7" %}
 
 package:
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
