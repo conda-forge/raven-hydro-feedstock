@@ -25,7 +25,7 @@ requirements:
     - python
     - hatch-fancy-pypi-readme
     - hatchling
-    - {{ libnetcdf }}
+    - libnetcdf {{ libnetcdf }}
     - pip
     - pybind11
     - python
@@ -33,7 +33,7 @@ requirements:
     - zlib
   run:
     - python
-    - {{ libnetcdf }}
+    - libnetcdf {{ libnetcdf }}
     - zlib
 
 test:
