@@ -7,7 +7,9 @@ Home: http://raven.uwaterloo.ca
 
 Package license: Apache-2.0 and Artistic-2.0
 
-Summary: The Python-based installer for the hydrological modelling framework, Raven, developed at the University of Waterloo in Ontario, Canada.
+Summary: The Python-based installer for the hydrological modelling framework, Raven,
+developed at the University of Waterloo in Ontario, Canada.
+
 
 Development: https://github.com/Ouranosinc/raven-hydro
 
