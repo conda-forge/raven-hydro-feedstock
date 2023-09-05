@@ -1,6 +1,6 @@
 {% set name = "raven-hydro" %}
-{% set version = "0.2.1" %}
-{% set sha256 = "e57e2b15f05a807fbffbbc34958b47ad27c8650930d4a438efc67c412d473241" %}
+{% set version = "0.2.4" %}
+{% set sha256 = "a3311eea9d6fc380c425e6a28948e3f111f48baecb4f2c668624328fcbb61efd" %}
 {% set raven_version = "3.7" %}
 
 package:
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -28,7 +28,6 @@ requirements:
     - libnetcdf
     - pip
     - pybind11
-    - python
     - scikit-build-core
     - zlib
   run:
