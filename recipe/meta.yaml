@@ -1,6 +1,6 @@
 {% set name = "raven-hydro" %}
-{% set version = "0.2.3" %}
-{% set sha256 = "3e778538d50e2f1e1624c3af95764cd55a903574b45ac6ddfe3e8b41b05e1d3f" %}
+{% set version = "0.2.4" %}
+{% set sha256 = "a3311eea9d6fc380c425e6a28948e3f111f48baecb4f2c668624328fcbb61efd" %}
 {% set raven_version = "3.7" %}
 
 package:
@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -28,7 +28,6 @@ requirements:
     - libnetcdf
     - pip
     - pybind11
-    - python
     - scikit-build-core
     - zlib
   run:
