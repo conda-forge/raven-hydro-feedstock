@@ -9,7 +9,7 @@ package:
 
 source:
 #  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
-  url: https://testpypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
+  url: https://test-files.pythonhosted.org/packages/23/df/2ebb868257f00290db513f31882c06ffbe08163b59e9feaebde14b69af44/raven_hydro-0.3.1.dev0.tar.gz
   sha256: {{ sha256 }}
 
 build:
