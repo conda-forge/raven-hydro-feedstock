@@ -1,6 +1,6 @@
 {% set name = "raven-hydro" %}
-{% set version = "0.3.0" %}
-{% set sha256 = "695860b68ca8617ee011c993164dfa2efd1fb64afb07d1fb469a18b46f3a3274" %}
+{% set version = "0.3.1.dev0" %}
+{% set sha256 = "82dfcfd570470c35c5199ba7407c5ceb040fa01ae0829107231a86f0b46b265f" %}
 {% set raven_version = "3.8" %}
 
 package:
@@ -8,7 +8,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
+#  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
+  url: https://testpypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
