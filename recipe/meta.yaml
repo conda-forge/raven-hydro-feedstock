@@ -24,7 +24,7 @@ requirements:
     - pybind11                               # [build_platform != target_platform]
     - cmake >=3.26.1
     - make  # [not win]
-    - ninja >=1.11.0 # [win]
+    - ninja >=1.11.0  # [win]
   host:
     - python
     - hatch-fancy-pypi-readme
