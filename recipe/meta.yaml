@@ -1,6 +1,6 @@
 {% set name = "raven-hydro" %}
 {% set version = "0.3.1" %}
-{% set sha256 = "683f363eb0145452775eb7df00a17b7e5897a404654b198d065423fac2b1b67b %}
+{% set sha256 = "683f363eb0145452775eb7df00a17b7e5897a404654b198d065423fac2b1b67b" %}
 {% set raven_version = "3.8.1" %}
 
 package:
