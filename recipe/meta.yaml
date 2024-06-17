@@ -1,7 +1,7 @@
 {% set name = "raven-hydro" %}
-{% set version = "0.2.4" %}
-{% set sha256 = "a3311eea9d6fc380c425e6a28948e3f111f48baecb4f2c668624328fcbb61efd" %}
-{% set raven_version = "3.7" %}
+{% set version = "0.3.1" %}
+{% set sha256 = "683f363eb0145452775eb7df00a17b7e5897a404654b198d065423fac2b1b67b" %}
+{% set raven_version = "3.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -22,9 +22,9 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
-    - cmake
+    - cmake >=3.26.1
     - make  # [not win]
-    - ninja  # [win]
+    - ninja >=1.11.0  # [win]
   host:
     - python
     - hatch-fancy-pypi-readme
@@ -32,7 +32,8 @@ requirements:
     - libnetcdf
     - pip
     - pybind11
-    - scikit-build-core
+    - scikit-build-core >=0.9
+    - setuptools-scm >=8.0
     - zlib
   run:
     - python
@@ -50,14 +51,14 @@ test:
     - raven -v
 
 about:
-  home: http://raven.uwaterloo.ca
+  home: https://raven.uwaterloo.ca
   dev_url: https://github.com/Ouranosinc/raven-hydro
-  doc_url: http://raven.uwaterloo.ca/files/v{{ raven_version }}/RavenManual_v{{ raven_version }}.pdf
-  doc_source_url: http://raven.uwaterloo.ca/Downloads.html
+  doc_url: https://raven.uwaterloo.ca/files/v{{ raven_version }}/RavenManual_v{{ raven_version }}.pdf
+  doc_source_url: https://raven.uwaterloo.ca/Downloads.html
   license: Apache-2.0 and Artistic-2.0
   license_file:
     - LICENSE
-    - build/_deps/raven-src/LICENSE
+    - RavenHydroFramework/LICENSE
   summary: |
     The Python-based installer for the hydrological modelling framework, Raven,
     developed at the University of Waterloo in Ontario, Canada.

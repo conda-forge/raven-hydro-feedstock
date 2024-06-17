@@ -3,7 +3,7 @@ About raven-hydro-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/raven-hydro-feedstock/blob/main/LICENSE.txt)
 
-Home: http://raven.uwaterloo.ca
+Home: https://raven.uwaterloo.ca
 
 Package license: Apache-2.0 and Artistic-2.0
 
@@ -13,7 +13,7 @@ developed at the University of Waterloo in Ontario, Canada.
 
 Development: https://github.com/Ouranosinc/raven-hydro
 
-Documentation: http://raven.uwaterloo.ca/files/v3.7/RavenManual_v3.7.pdf
+Documentation: https://raven.uwaterloo.ca/files/v3.8/RavenManual_v3.8.pdf
 
 Current build status
 ====================
