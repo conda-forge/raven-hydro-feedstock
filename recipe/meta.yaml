@@ -1,6 +1,6 @@
 {% set name = "raven-hydro" %}
-{% set version = "0.3.1" %}
-{% set sha256 = "683f363eb0145452775eb7df00a17b7e5897a404654b198d065423fac2b1b67b" %}
+{% set version = "0.3.2" %}
+{% set sha256 = "ae2965d561e47108af9a9875ff785dc7633ca850b6addac1dbc96b777755b18f" %}
 {% set raven_version = "3.8.1" %}
 
 package:
@@ -8,11 +8,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -27,12 +27,12 @@ requirements:
     - ninja >=1.11.0  # [win]
   host:
     - python
-    - hatch-fancy-pypi-readme
-    - hatchling
+    - hatch-fancy-pypi-readme >=23.1.0
+    - hatchling >=1.23.0
     - libnetcdf
     - pip
-    - pybind11
-    - scikit-build-core >=0.9
+    - pybind11 >=2.13.0,<3.0
+    - scikit-build-core >=0.10
     - setuptools-scm >=8.0
     - zlib
   run:
