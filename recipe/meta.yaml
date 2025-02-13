@@ -2,7 +2,6 @@
 {% set version = "0.4.0" %}
 {% set sha256 = "f9a14114e7516c55ca0b858886d280f3de5504b01800ae182753fc9b9538af35" %}
 {% set raven_version = "4.0" %}
-{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -20,14 +19,14 @@ requirements:
   build:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - python {{ python_min }}                # [build_platform != target_platform]
+    - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - cmake >=3.26.1
     - make  # [not win]
     - ninja >=1.11.0  # [win]
   host:
-    - python {{ python_min }}
+    - python
     - hatch-fancy-pypi-readme >=23.1.0
     - hatchling >=1.23.0
     - libnetcdf
@@ -37,7 +36,7 @@ requirements:
     - setuptools-scm >=8.0
     - zlib
   run:
-    - python >={{ python_min }}
+    - python
     - libnetcdf
     - zlib
 
@@ -46,7 +45,7 @@ test:
     - raven_hydro
   requires:
     - pip
-    - python {{ python_min }}
+    - python
   commands:
     - pip check
     - test -f $PREFIX/bin/raven  # [not win]
