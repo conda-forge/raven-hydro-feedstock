@@ -1,7 +1,7 @@
 {% set name = "raven-hydro" %}
-{% set version = "0.3.2" %}
-{% set sha256 = "ae2965d561e47108af9a9875ff785dc7633ca850b6addac1dbc96b777755b18f" %}
-{% set raven_version = "3.8.1" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "f9a14114e7516c55ca0b858886d280f3de5504b01800ae182753fc9b9538af35" %}
+{% set raven_version = "4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -45,6 +45,7 @@ test:
     - raven_hydro
   requires:
     - pip
+    - python
   commands:
     - pip check
     - test -f $PREFIX/bin/raven  # [not win]
