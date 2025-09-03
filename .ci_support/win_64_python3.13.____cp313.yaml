@@ -7,7 +7,7 @@ channel_targets:
 cxx_compiler:
 - vs2022
 libnetcdf:
-- 4.9.2
+- 4.9.3
 pin_run_as_build:
   python:
     min_pin: x.x
