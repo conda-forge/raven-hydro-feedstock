@@ -13,7 +13,7 @@ developed at the University of Waterloo in Ontario, Canada.
 
 Development: https://github.com/Ouranosinc/raven-hydro
 
-Documentation: https://raven.uwaterloo.ca/files/v4.0/RavenManual_v4.0.pdf
+Documentation: https://raven.uwaterloo.ca/files/v4.0.1/RavenManual_v4.0.1.pdf
 
 Current build status
 ====================
@@ -374,7 +374,4 @@ Feedstock Maintainers
 * [@Zeitsperre](https://github.com/Zeitsperre/)
 * [@huard](https://github.com/huard/)
 * [@julemai](https://github.com/julemai/)
-
-
-<!-- dummy commit to enable rerendering -->
 
