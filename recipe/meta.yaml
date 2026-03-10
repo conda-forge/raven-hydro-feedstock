@@ -1,7 +1,7 @@
 {% set name = "raven-hydro" %}
 {% set version = "4.12.0" %}
 {% set sha256 = "d086721efd7993c65ea6c7cd6632cabd17a26f4893393ec66f878c52258d54af" %}
-{% set raven_version = "4.0.1" %}
+{% set raven_version = "4.12" %}
 
 package:
   name: {{ name|lower }}
@@ -21,7 +21,7 @@ requirements:
     - {{ compiler('cxx') }}
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - pybind11 >=3.0.1,<4.0                 # [build_platform != target_platform]
+    - pybind11 >=3.0.1,<4.0                  # [build_platform != target_platform]
     - cmake >=3.26.1
     - make  # [not win]
     - ninja >=1.11.0  # [win]
@@ -30,9 +30,9 @@ requirements:
     - hatch-fancy-pypi-readme >=25.1.0
     - hatchling >=1.27.0
     - libnetcdf
-    - pip
+    - pip >=25.2
     - pybind11 >=3.0.1,<4.0
-    - scikit-build-core >=0.11
+    - scikit-build-core >=0.12
     - setuptools-scm >=9.2
     - zlib
   run:
