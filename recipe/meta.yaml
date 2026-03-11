@@ -1,7 +1,7 @@
 {% set name = "raven-hydro" %}
 {% set version = "4.12.1" %}
 {% set sha256 = "596e0ef73e0f8a5fbfaee15df138e1217f67c883e505ac2e1600bce6e3adc130" %}
-{% set raven_version = "4.0.1" %}
+{% set raven_version = "4.12" %}
 
 package:
   name: {{ name|lower }}
@@ -30,9 +30,9 @@ requirements:
     - hatch-fancy-pypi-readme >=25.1.0
     - hatchling >=1.27.0
     - libnetcdf
-    - pip
+    - pip >=25.2
     - pybind11 >=3.0.1,<4.0
-    - scikit-build-core >=0.11
+    - scikit-build-core >=0.12
     - setuptools-scm >=9.2
     - zlib
   run:
@@ -44,7 +44,7 @@ test:
   imports:
     - raven_hydro
   requires:
-    - pip
+    - pip >=25.2
     - python
   commands:
     - pip check
