@@ -29,7 +29,7 @@ requirements:
     - python
     - hatch-fancy-pypi-readme >=25.1.0
     - hatchling >=1.27.0
-    - libnetcdf
+    - libnetcdf < 4.10
     - pip >=25.2
     - pybind11 >=3.0.1,<4.0
     - scikit-build-core >=0.12
@@ -37,7 +37,7 @@ requirements:
     - zlib
   run:
     - python
-    - libnetcdf
+    - libnetcdf < 4.10.0
     - zlib
 
 test:
