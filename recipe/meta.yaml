@@ -37,7 +37,7 @@ requirements:
     - zlib
   run:
     - python
-    - libnetcdf <=4.9.2
+    - libnetcdf >=4.10.1
     - zlib
 
 test:
